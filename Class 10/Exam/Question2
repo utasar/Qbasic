@@ -1,0 +1,22 @@
+ Write a program in QBASIC that asks length, breadth and height of room and calculates its area and
+volume. Create a user-defined function to calculate area and sub-program to calculate volume. (4) [Hint:
+Area=LxB Volume LXBXH]
+
+DECLARE FUNCTION AREA(L,B)
+DECLARE SUB VOL(L,B,H)
+CLS
+INPUT "Enter Length"; L
+INPUT "Enter Breadth"; B
+INPUT "Enter Height"; H
+PRINT "Area of room="; AREA(L,B)
+CALL VOL(L,B,H)
+END
+
+FUNCTION AREA(L,B)
+AREA= L * B
+END FUNCTION
+
+SUB VOL(L,B,H)
+V=L*B*H
+PRINT "Volume of Room="; V
+END SUB
