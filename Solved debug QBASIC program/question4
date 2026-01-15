@@ -1,0 +1,27 @@
+Q4)
+
+REM To store name and age in a sequential data file REC.DAT
+CLS
+OPEN "Employee.dat" FOR OUTPUT AS #1
+DO
+INPUT "Enter employee's name";N$
+INPUT "Enter employee's address";A$
+INPUT "Enter employee's age";A1
+INPUT "Enter employee's gender";G$
+INPUT "Enter employee's salary";S
+WRITE #1,A$,A1,G$,S
+INPUT "Add more records(Y/N)";A
+LOOP WHILE UCASE(A$)="Y"
+CLOSE 1
+END
+Solution:
+
+OPEN "REC.DAT" FOR OUTPUT AS #1
+DO
+INPUT "Enter employee's name";N$
+INPUT "Enter employee's age";A1
+WRITE #1,N$,A1
+INPUT "Add more records(Y/N)";A$
+LOOP WHILE UCASE$(A$)="Y"
+CLOSE #1
+END
