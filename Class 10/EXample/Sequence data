@@ -1,3 +1,6 @@
+ Write a program to create a sequential data file named
+"record.txt" and store Roll number, Name, Address, and Class of
+a student.
 OPEN "record.txt" FOR OUTPUT AS #1
 CLS
 INPUT "Enter roll, name, address, and class of a student: "; r, n$, a$, c
