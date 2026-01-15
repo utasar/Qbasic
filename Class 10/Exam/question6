@@ -1,0 +1,18 @@
+() "Record.dat" eGg] sequential data file df Roll No., Name, Gender, English, Nepali, Maths /
+Computer field हरूमा data भण्डार गरेर राखिएको छ। त्यस data file बाट Gender 'F' हुने र कम्प्युटर
+विषयमा अङ्क ९० भन्दा माथि भएका विद्यार्थीहरूको सम्पूर्ण रेकर्ड प्रिन्ट गर्ने प्रोग्राम लेख्नुहोस्। (४)
+A sequential data file called "Record.txt" has stored data under the field heading Roll No.,
+Name, Gender, English, Nepali, Maths and Computer. Write a program to display all
+the information of those students whose gender is 'F' and obtained marks in
+computer is more than 90.
+
+>OPEN "Record.txt" FOR INPUT AS #1
+CLS
+WHILE NOT EOF(1)
+INPUT #1,R,N$,G$,E,N,M,C
+IF UCASE$(F$)="F" AND C>=90 THEN
+PRINT R;N$;G$;E;N;M;C
+END IF
+WEND
+CLOSE #1
+END
