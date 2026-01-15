@@ -1,0 +1,15 @@
+Write a program to display only those records who live in
+"POKHARA" from the data file named "record.txt" which
+contains Roll number, Name, Address, and Class of several
+students.
+OPEN "record.txt" FOR INPUT AS #1
+CLS
+DO WHILE NOT EOF(1)
+    INPUT #1, r, n$, a$, c
+    IF LEFT$(UCASE$(n$), 1) = "K" THEN
+        PRINT r, n$, a$, c
+    END IF
+LOOP
+CLOSE #1
+END
+        
