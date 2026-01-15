@@ -1,0 +1,13 @@
+ Write a program in BASIC.
+
+a. To input a number and check whether the number is odd or even:
+
+CLS
+INPUT "Enter a number: "; N
+IF N MOD 2 = 0 THEN
+PRINT "The number is Even."
+ELSE
+
+PRINT "The number is Odd."
+END IF
+END
