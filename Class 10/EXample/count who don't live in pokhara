@@ -1,0 +1,18 @@
+ Write a program to count only those records who don't live in
+"POKHARA" from the data file named "record.txt" which
+contains Roll number, Name, Address, and Class of several
+students.
+OPEN "record.txt" FOR INPUT AS #1
+CLS
+COUNT = 0
+DO WHILE NOT EOF(1)
+    INPUT #1, r, n$, a$, c
+    IF UCASE$(a$) <> "POKHARA" THEN
+        COUNT = COUNT + 1
+    END IF
+LOOP
+CLOSE #1
+PRINT "Number of students not living in POKHARA: "; COUNT
+END
+
+        
