@@ -1,0 +1,15 @@
+७. तल दिइएको प्रोग्रामलाई अध्ययन गरी दिइएका प्रश्नह को उत्तर लेख्नुहोस् : (२*२=२)
+Study the following program and answer the given questions:
+OPEN "Detail.dat" FOR INPUT AS #1
+OPEN "Temp.dat" FOR OUTPUT AS #2
+INPUT "Enter name of the students "; Sn$
+FOR I = 1 TO 10
+INPUT #1, Nm$, CI, A
+IF Sn$ <> Nm$ THEN
+WRITE #2, Nm$, CI, A
+END IF
+NEXT I
+CLOSE #1, #2
+KILL "Detail.dat"
+NAME "Temp.dat" AS "Detail.dat"
+END
