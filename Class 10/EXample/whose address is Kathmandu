@@ -1,0 +1,19 @@
+Write a program to delete all those records whose address is
+"KATHMANDU" from the data file named "record.txt" which
+contains Roll number, Name, Address, and Class of several
+Students.
+OPEN "record.txt" FOR INPUT AS #1
+OPEN "temp.txt" FOR OUTPUT AS #2
+CLS
+DO WHILE NOT EOF(1)
+    INPUT #1, r, n$, a$, c
+    IF UCASE$(a$) <> "KATHMANDU" THEN
+        PRINT #2, r, n$, a$, c
+    END IF
+LOOP
+CLOSE #1
+CLOSE #2
+KILL "record.txt"
+NAME "temp.txt" AS "record.txt"
+END
+        
