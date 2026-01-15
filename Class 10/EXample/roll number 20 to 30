@@ -1,0 +1,16 @@
+Write a program to display only those records whose roll
+number is in the range from 20 to 30 from the data file named
+"record.txt" which contains Roll number, Name, Address, and
+Class of several students.
+OPEN "record.txt" FOR INPUT AS #1
+CLS
+DO WHILE NOT EOF(1)
+    INPUT #1, r, n$, a$, c
+    IF r >= 20 AND r <= 30 THEN
+        PRINT r, n$, a$, c
+    END IF
+LOOP
+CLOSE #1
+END
+
+        
