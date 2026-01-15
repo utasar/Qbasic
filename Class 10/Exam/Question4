@@ -1,0 +1,26 @@
+>Debugged program:
+REM to add record in an existing file
+CLS
+OPEN "Record.DAT" FOR APPEND AS #1
+AA:
+INPUT "Enter Name, Class and Roll No. "; Nm$, CI, Rn
+INPUT #1, Nm$, CI, Rn
+INPUT "More records "; Y$
+IF UCASE$(Y$) = "Y" THEN GOTO aa
+CLOSE #1
+END
+
+(TURN ON DESKTOP MODE TO VIEW IMAGE)
+6. तल दिइएको प्रोग्राममा रहेका गल्तीहरूलाई सच्याएर पुनः लेखनुहोस: (२)
+Re-write the given program after correcting the bugs:
+
+REM to add record in an existing file
+CLS
+OPEN "Record. Dat" FOR OUTPUT AS #1
+AA:
+INPUT "Enter Name, Class and Roll No. "; Nm$, CI, Rn
+INPUT #2, Nm$, CI, Rn
+INPUT "More records "; Y$
+IF UCASE$(Y$) = "Y" THEN GOTO aa
+CLOSE "Rrecord.dat"
+END
