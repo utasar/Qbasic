@@ -1,0 +1,17 @@
+Q) A sequential data file named "result.doc" contains Roll number, Name, Class and Marks obtained in 5
+different subject i.e Maths, Science, English, Nepali, Computer. Let us consider Pass mark to be 40 and Ful
+mark to be 100 then answer all the following questions.
+
+1. Display all the names of students who failed in any one or
+more of the subjects:
+OPEN "result.doc" FOR INPUT AS #1
+CLS
+DO WHILE NOT EOF(1)
+    INPUT #1, roll, name$, class$, maths, science, english, nepali, computer
+    IF maths < 40 OR science < 40 OR english < 40 OR nepali < 40 OR computer < 40 THEN
+        PRINT name$
+    END IF
+LOOP
+CLOSE #1
+END
+        
