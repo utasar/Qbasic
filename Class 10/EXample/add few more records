@@ -1,0 +1,14 @@
+ Write a program to add few more records in a data file named
+"record.txt" which contains Roll number, Name, Address, and
+Class of students.
+OPEN "record.txt" FOR APPEND AS #1
+CLS
+DO
+    INPUT "Enter roll, name, address, and class of a student: "; r, n$, a$, c
+    WRITE #1, r, n$, a$, c
+    INPUT "Do you want to continue? "; x$
+LOOP WHILE UCASE$(x$) = "Y"
+CLOSE #1
+END
+
+        
