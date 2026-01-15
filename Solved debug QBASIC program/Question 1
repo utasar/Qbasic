@@ -1,0 +1,31 @@
+Q1)
+
+REM program to generate 2,2,4,6,10 upto 10th term.
+DECLARE SUB FIBO()
+CLS
+EXECUTE FIBO
+END
+SUB FIBO
+A=2
+B=2
+FOR Ctr=5 to 1
+DISPLAY A;B;
+A=A+B
+B=A+B
+NEXT Ctr
+END FUNCTION
+Solution:
+
+DECLARE SUB FIBO()
+CLS
+CALL FIBO
+END
+SUB FIBO
+A=2
+B=2
+FOR Ctr=5 to 1 STEP -1
+PRINT A;B;
+A=A+B
+B=A+B
+NEXT Ctr
+END SUB
