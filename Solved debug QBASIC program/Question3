@@ -1,0 +1,17 @@
+Q3)
+
+REM To store name and age in a sequental data gile STD.DOC
+OPEN STD.DOC FOR OUT AS#1
+INPUT "Enter name";N
+INPUT "Enter age";A
+WRITE 1,N$,A
+CLOSE #1
+END
+Solution:
+
+OPEN "STD.DOC" FOR OUTPUT AS #1
+INPUT "Enter name";N$
+INPUT "Enter age";A
+WRITE #1,N$,A
+CLOSE #1
+END
