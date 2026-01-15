@@ -1,4 +1,4 @@
-1.A program to calculate an area of a triangle where the length of three sides is given.
+A program to calculate an area of a triangle where the length of three sides is given.
 CLS
 INPUT "ENTER FIRST, SECOND, THIRD SIDE";A,B,C
 S=(A+B+C)/2
