@@ -1,0 +1,8 @@
+OPEN "record.txt" FOR OUTPUT AS #1
+CLS
+INPUT "Enter roll, name, address, and class of a student: "; r, n$, a$, c
+WRITE #1, r, n$, a$, c
+CLOSE #1
+END
+
+        
