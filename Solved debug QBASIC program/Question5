@@ -1,0 +1,26 @@
+Q5)
+
+CLS
+OPEN "check.dat" FOR INPUT AS #1
+DO WHILE NOT EOF(3)
+INPUT #1,N$,D$,PH,A$
+PRINT "Name=";N$
+PRINT "DOB=";D$
+PRINT "Phone=";PH
+PRINT "Address=";A
+LOOP
+CLOSE #
+END
+Solution:
+
+CLS
+OPEN "check.dat" FOR INPUT AS #1
+DO WHILE NOT EOF(1)
+INPUT #1,N$,D$,PH,A$
+PRINT "Name=";N$
+PRINT "DOB=";D$
+PRINT "Phone=";PH
+PRINT "Address=";A$
+LOOP
+CLOSE #1
+END
