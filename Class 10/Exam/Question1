@@ -1,0 +1,14 @@
+ A sequential data file called "STUDENT.DAT" has stored data under the field heading Registration
+No., Class, Section, Name, Date of Birth and Gender. Write a program to display all the information of
+class NINE students whose gender is 'FEMALE'. 
+
+OPEN "STUDENT.DAT" FOR INPUT AS #1
+CLS
+WHILE NOT EOF(1)
+INPUT #1, R, CL, SE$, N$, D$, G$
+IF UCASE$(G$)="FEMALE" AND CL=9 THEN
+PRINT R, CL, SE$, NS, D$, G$
+END IF
+WEND
+CLOSE #1
+END
