@@ -1,0 +1,22 @@
+Q6)
+
+CLS
+OPEN "MARKS.DAT" FOR INPU AS #1
+PRINT "Roll Number","Name","English","Nepali","Maths"
+DO WHILE NOT EOF()
+INPUT #1,RN,N$,E,Ne,M
+PRINT R,N$,E,Ne,M
+END WHILE
+CLOSE #1
+END
+Solution:
+
+CLS
+OPEN "MARKS.DAT" FOR INPUT AS #1
+PRINT "Roll Number","Name","English","Nepali","Maths"
+DO WHILE NOT EOF(1)
+INPUT #1,RN,N$,E,Ne,M
+PRINT RN,N$,E,Ne,M
+LOOP
+CLOSE #1
+END
