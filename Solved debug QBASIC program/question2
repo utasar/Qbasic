@@ -1,0 +1,30 @@
+Q2)
+
+DECLARE FUNCTION reverse$(N$)
+INPUT "Any string";N$
+X$=reverse$(N$)
+PRINT N$
+END
+FUNCTION reverse (N$)
+L=LEN$(N$)
+FOR X=L to 1 STEP -1
+A$=MID$(N$,X,1)
+B$=B$+A$
+NEXT X
+B$=reverse$(N$)
+END SUB
+Solution:
+
+DECLARE FUNCTION reverse$(N$)
+INPUT "Any string";N$
+X$=reverse$(N$)
+PRINT X$
+END
+FUNCTION reverse$(N$)
+L=LEN(N$)
+FOR X=L to 1 STEP -1
+A$=MID$(N$,X,1)
+B$=B$+A$
+NEXT X
+reverse$=B$
+END SUB
