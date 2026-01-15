@@ -1,0 +1,28 @@
+९. (क) कुनै एउटा कोठाको लम्बाई, चौंडाई र उचाई मागी उक्त कोठाको क्षेत्रफल र आयतन पत्ता लगाउने प्रोग्राम
+क्युवेसिक भाषाको प्रयोग गरी लेख्नुहोस्। क्षेत्रफल गणना गर्न युजर डिफाइन्ड फंक्सन र आयतन गणना गर्न सब
+प्रोग्राम बनाउनु होस्। (४)
+Write a program in QBASIC that asks length, breadth and height of room and cal- culates its
+area and volume. Create a user-defined function to calculate area and sub-program to calculate
+volume.
+
+Hint: [A = LxB], [V = LxBxH]
+
+A
+
+DECLARE FUNCTION AREA(L,B)
+DECLARE SUB VOL(L,B,H)
+CLS
+INPUT "ENTER LENGTH";L
+INPUT "ENTER BREADTH";B
+INPUT "ENTER HEIGHT";H
+PRINT "AREA OF ROOM=";AREA(L,B)
+CALL VOL(L,B,H)
+END
+
+FUNCTION AREA(L,B)
+AREA=L*B
+END FUNCTION
+SUB VOL(L,B,H)
+VOL=L*B*H
+PRINT"VOLUME OF ROOM=";V
+END SUB
